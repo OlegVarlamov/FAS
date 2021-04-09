@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ReceiveStatusPage from "features/receiveStatus/ReceiveStatusPage";
+import styled from "styled-components";
+import "fonts/fonts.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const StyledApp = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  background: #e5e5e5;
+  font-family: "Space Grotesk", sans-serif;
+`;
+
+const App: React.FC = () => (
+  <StyledApp>
+    <ReceiveStatusPage />
+  </StyledApp>
+);
 
 export default App;
